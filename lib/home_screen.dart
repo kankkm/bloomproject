@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 150),
           child: Image.asset(
-            'assets/Images/logo.png',
+            'assets/images/logo.png',
             filterQuality: FilterQuality.low,
             cacheWidth: 300,
             fit: BoxFit.contain,
