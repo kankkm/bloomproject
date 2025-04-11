@@ -31,7 +31,7 @@ class _HomeScreenState extends State<FullScreenHero> {
           // Background
           Positioned.fill(
             child: Image.asset(
-              'assets/Images/f6.jpg',
+              'assets/images/f6.jpg',
               fit: BoxFit.cover,
               alignment: Alignment.center,
             ).animate().fadeIn(duration: 800.ms),

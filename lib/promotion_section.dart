@@ -19,7 +19,7 @@ class PromotionSection extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Image.asset(
-                      'assets/Images/f8.jpg',
+                      'assets/images/f8.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -73,7 +73,7 @@ class PromotionSection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Image.asset(
-                    'assets/Images/f8.jpg',
+                    'assets/images/f8.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

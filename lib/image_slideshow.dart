@@ -13,16 +13,16 @@ class ImageSlideshow extends StatefulWidget {
 class _ImageSlideshowState extends State<ImageSlideshow> {
   final PageController _pageController = PageController();
   final List<String> _images = [
-    'assets/Images/f11.png',
-    'assets/Images/f12.png',
-    'assets/Images/f13.png',
-    'assets/Images/f14.jpg',
-    'assets/Images/f15.jpg',
-    'assets/Images/f16.jpg',
-    'assets/Images/f17.jpg',
-    'assets/Images/f18.jpg',
-    'assets/Images/f19.jpg',
-    'assets/Images/f20.jpg',
+    'assets/images/f11.png',
+    'assets/images/f12.png',
+    'assets/images/f13.png',
+    'assets/images/f14.jpg',
+    'assets/images/f15.jpg',
+    'assets/images/f16.jpg',
+    'assets/images/f17.jpg',
+    'assets/images/f18.jpg',
+    'assets/images/f19.jpg',
+    'assets/images/f20.jpg',
   ];
   int _currentPage = 0;
   Timer? _timer;

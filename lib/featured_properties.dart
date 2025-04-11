@@ -32,17 +32,17 @@ class FeaturedProperties extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset(
-                      'assets/Images/f10.jpg',
+                      'assets/images/f10.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
                     Image.asset(
-                      'assets/Images/f21.jpg',
+                      'assets/images/f21.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
                     Image.asset(
-                      'assets/Images/f22.jpg',
+                      'assets/images/f22.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
@@ -52,19 +52,19 @@ class FeaturedProperties extends StatelessWidget {
                 return Column(
                   children: [
                     Image.asset(
-                      'assets/Images/f10.jpg',
+                      'assets/images/f10.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(height: 20),
                     Image.asset(
-                      'assets/Images/f21.jpg',
+                      'assets/images/f21.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(height: 20),
                     Image.asset(
-                      'assets/Images/f22.jpg',
+                      'assets/images/f22.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),

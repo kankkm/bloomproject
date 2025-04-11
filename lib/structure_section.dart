@@ -97,7 +97,7 @@ class StuctureSection extends StatelessWidget {
                       child: AspectRatio(
                         aspectRatio: 720 / 1019,
                         child: Image.asset(
-                          'assets/Images/f9.jpg',
+                          'assets/images/f9.jpg',
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -112,7 +112,7 @@ class StuctureSection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   child: Image.asset(
-                    'assets/Images/f9.jpg',
+                    'assets/images/f9.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
