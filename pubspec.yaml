@@ -1,0 +1,54 @@
+name: green_estate
+description: A responsive real estate landing page with dark green theme
+
+publish_to: 'none' # Remove this line if you want to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.5
+  google_fonts: ^4.0.3
+  flutter_animate: ^4.5.2
+  scrollable_positioned_list: ^0.3.8
+  url_launcher: ^6.3.1
+  youtube_player_flutter: ^9.1.1
+  youtube_player_iframe: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/Images/f1.jpg
+    - assets/Images/f2.jpg
+    - assets/Images/f3.jpg
+    - assets/Images/f4.jpg
+    - assets/Images/logo.png
+    - assets/images/logo.png
+    - assets/Images/f6.jpg
+    - assets/Images/f8.jpg
+    - assets/Images/f9.jpg
+    - assets/Images/f11.png
+    - assets/Images/f12.png
+    - assets/Images/f13.png
+    - assets/Images/f14.jpg
+    - assets/Images/f15.jpg
+    - assets/Images/f16.jpg
+    - assets/Images/f17.jpg
+    - assets/Images/f18.jpg
+    - assets/Images/f19.jpg
+    - assets/Images/f20.jpg
+    - assets/Images/f10.jpg
+    - assets/Images/f21.jpg
+    - assets/Images/f22.jpg
+
+
