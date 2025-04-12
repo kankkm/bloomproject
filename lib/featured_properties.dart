@@ -31,18 +31,15 @@ class FeaturedProperties extends StatelessWidget {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset(
-                      'assets/images/f10.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
-                    Image.asset(
-                      'assets/images/f21.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
-                    Image.asset(
-                      'assets/images/f22.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                     ),
@@ -51,20 +48,17 @@ class FeaturedProperties extends StatelessWidget {
               } else {
                 return Column(
                   children: [
-                    Image.asset(
-                      'assets/images/f10.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(height: 20),
-                    Image.asset(
-                      'assets/images/f21.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(height: 20),
-                    Image.asset(
-                      'assets/images/f22.jpg',
+                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),

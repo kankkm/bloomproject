@@ -78,9 +78,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         title: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 150),
-          child: Image.asset(
-            'assets/images/logo.png',
+          constraints: BoxConstraints(maxWidth: 200),
+          child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430293/f5_wxvgqk.png',
             filterQuality: FilterQuality.low,
             cacheWidth: 300,
             fit: BoxFit.contain,

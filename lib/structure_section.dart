@@ -96,8 +96,7 @@ class StuctureSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       child: AspectRatio(
                         aspectRatio: 720 / 1019,
-                        child: Image.asset(
-                          'assets/images/f9.jpg',
+                        child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -111,8 +110,7 @@ class StuctureSection extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Image.asset(
-                    'assets/images/f9.jpg',
+                  child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

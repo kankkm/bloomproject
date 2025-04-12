@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart'; // Add this import
+import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart'; // Added for better network image handling
 
 class ImageSlideshow extends StatefulWidget {
   const ImageSlideshow({super.key});
@@ -12,18 +13,19 @@ class ImageSlideshow extends StatefulWidget {
 
 class _ImageSlideshowState extends State<ImageSlideshow> {
   final PageController _pageController = PageController();
-  final List<String> _images = [
-    'assets/images/f11.png',
-    'assets/images/f12.png',
-    'assets/images/f13.png',
-    'assets/images/f14.jpg',
-    'assets/images/f15.jpg',
-    'assets/images/f16.jpg',
-    'assets/images/f17.jpg',
-    'assets/images/f18.jpg',
-    'assets/images/f19.jpg',
-    'assets/images/f20.jpg',
+  final List<String> _imageUrls = [ // Changed to network URLs
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430302/f11_zu7vkh.png', // Replace with your actual URLs
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430313/f12_ubct43.png',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430300/f13_c9sycg.png',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430299/f14_qjr2md.jpg',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430305/f15_ijjkf9.jpg',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430303/f16_iu9vio.jpg',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744431903/tab_dj6erl.png',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744431132/toilet_uh6xqg.png',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/t_bed/v1744432159/f19_krfefo.jpg',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/t_kitchen/v1744432165/f20_w6xsde.jpg',
   ];
+
   int _currentPage = 0;
   Timer? _timer;
   bool _isPlaying = true;
@@ -42,7 +44,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
   }
 
   void _startAutoPlay() {
-    _timer = Timer.periodic(const Duration(seconds: 2), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
       if (_isPlaying) {
         _goToNextPage();
       }
@@ -50,7 +52,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
   }
 
   void _goToNextPage() {
-    if (_currentPage < _images.length - 1) {
+    if (_currentPage < _imageUrls.length - 1) {
       _currentPage++;
     } else {
       _currentPage = 0;
@@ -62,7 +64,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
     if (_currentPage > 0) {
       _currentPage--;
     } else {
-      _currentPage = _images.length - 1;
+      _currentPage = _imageUrls.length - 1;
     }
     _animateToPage(_currentPage);
   }
@@ -84,14 +86,16 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Text(
-        'รูปบ้าน',
-        style: GoogleFonts.prompt(
-          color: const Color(0xFF22382C),
-          fontSize: 32,
-          fontWeight: FontWeight.bold,
-        ),
-      ).animate().fadeIn().slideY(),
+      children: [
+        Text(
+          'รูปบ้าน',
+          style: GoogleFonts.prompt(
+            color: const Color(0xFF22382C),
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+        ).animate().fadeIn().slideY(),
+
         // Image Slideshow
         AspectRatio(
           aspectRatio: 16 / 9,
@@ -100,7 +104,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
             children: [
               PageView.builder(
                 controller: _pageController,
-                itemCount: _images.length,
+                itemCount: _imageUrls.length,
                 onPageChanged: (int page) {
                   setState(() => _currentPage = page);
                 },
@@ -119,10 +123,19 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        _images[index],
+                      child: CachedNetworkImage( // Using cached network image
+                        imageUrl: _imageUrls[index],
                         fit: BoxFit.cover,
                         width: double.infinity,
+                        placeholder: (context, url) => Center(
+                          child: CircularProgressIndicator(
+                            color: Colors.grey[300],
+                          ),
+                        ),
+                        errorWidget: (context, url, error) => Container(
+                          color: Colors.grey[200],
+                          child: const Icon(Icons.error),
+                        ),
                       ),
                     ),
                   ).animate().fadeIn(duration: 500.ms);
@@ -175,7 +188,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
                 bottom: 20,
                 right: 20,
                 child: Row(
-                  children: List.generate(_images.length, (index) {
+                  children: List.generate(_imageUrls.length, (index) {
                     return Container(
                       width: 10,
                       height: 10,
@@ -193,57 +206,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
             ],
           ),
         ),
-
-        // Styled Caption with Google Fonts
-       // Padding(
-         // padding: const EdgeInsets.only(top: 16),
-         // child: Container(
-           // decoration: BoxDecoration(
-           //   color: Color(0xFFDCD5CD),
-            //  borderRadius: BorderRadius.circular(8),
-           // ),
-           // padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-           // child: Row(
-             // mainAxisAlignment: MainAxisAlignment.center,
-             // children: [
-              //  IconButton(
-               //   icon: const Icon(Icons.skip_previous),
-                //  onPressed: _goToPreviousPage,
-                //  color: const Color(0xFF22382C),
-              //  ),
-               // Expanded(
-                //  child: Text(
-                 //   _getCaption(_currentPage),
-                   // style: GoogleFonts.prompt( // Added Google Fonts
-                    //  color: const Color(0xFF22382C), // Your color
-                     // fontSize: MediaQuery.of(context).size.width > 600 ? 20 : 16,
-                     // fontWeight: FontWeight.bold,
-                     // letterSpacing: 0.5,
-                  //  ),
-                  //  textAlign: TextAlign.center,
-                 // ).animate().fadeIn(duration: 300.ms),
-               // ),
-               // IconButton(
-                 // icon: const Icon(Icons.skip_next),
-                 // onPressed: _goToNextPage,
-                 // color: const Color(0xFF22382C),
-              //  ),
-             // ],
-          //  ),
-        //  ),
-       // ),
       ],
     );
   }
-
-  //String _getCaption(int index) {
-    //final captions = [
-      //'Luxury Living Spaces',
-      //'Modern Architecture',
-      //'Premium Amenities',
-      //'Beautiful Landscaping',
-      //'Community Facilities'
-   // ];
-   // return captions[index];
- // }
 }

@@ -18,8 +18,7 @@ class PromotionSection extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Image.asset(
-                      'assets/images/f8.jpg',
+                    child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f8_ybjxzw.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),

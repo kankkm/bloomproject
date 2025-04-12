@@ -39,8 +39,7 @@ class LocationMap extends StatelessWidget {
                         padding: const EdgeInsets.all(20.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            'assets/images/f4.jpg',
+                          child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -116,8 +115,7 @@ class LocationMap extends StatelessWidget {
                       padding: const EdgeInsets.all(20.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'assets/images/f4.jpg',
+                        child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),
