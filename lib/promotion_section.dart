@@ -101,7 +101,11 @@ class PromotionSection extends StatelessWidget {
                       ),
                       const SizedBox(height: 15),
                       Text(
-                        'BLOOM PROJECT สว่างแดนดิน 1, โครงการที่พักอาศัย บ้านชั้นเดียวจำนวน 4 หลัง',
+                        'BLOOM PROJECT สว่างแดนดิน 1, โครงการที่พักอาศัย',
+                        style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
+                      ),
+                      Text(
+                        'บ้านชั้นเดียวจำนวน4หลัง',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                       ),
                       Text(
