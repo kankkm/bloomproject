@@ -84,7 +84,14 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: [Text(
+        'รูปบ้าน',
+        style: GoogleFonts.prompt(
+          color: const Color(0xFF22382C),
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+        ),
+      ).animate().fadeIn().slideY(),
         // Image Slideshow
         AspectRatio(
           aspectRatio: 16 / 9,
