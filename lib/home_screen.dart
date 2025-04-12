@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
             PopupMenuItem(value: '4', child: Text('รูปบ้าน', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '5', child: Text('วิดิโอ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '5', child: Text('วีดิโอ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
             PopupMenuItem(value: '6', child: Text('ความคืบหน้าโครงการ', style: GoogleFonts.prompt(

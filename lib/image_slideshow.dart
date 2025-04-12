@@ -20,8 +20,8 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
     'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430299/f14_qjr2md.jpg',
     'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430305/f15_ijjkf9.jpg',
     'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430303/f16_iu9vio.jpg',
-    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744431903/tab_dj6erl.png',
-    'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744431132/toilet_uh6xqg.png',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/t_tablet2/v1744434229/f17_oeycyx.jpg',
+    'https://res.cloudinary.com/dsenp6ilm/image/upload/t_toiletnew/v1744434233/f18_w7nvff.jpg',
     'https://res.cloudinary.com/dsenp6ilm/image/upload/t_bed/v1744432159/f19_krfefo.jpg',
     'https://res.cloudinary.com/dsenp6ilm/image/upload/t_kitchen/v1744432165/f20_w6xsde.jpg',
   ];

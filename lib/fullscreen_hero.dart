@@ -80,7 +80,15 @@ class _HomeScreenState extends State<FullScreenHero> {
 
                       const SizedBox(height: 20),
                       Text(
-                        'BLOOM PROJECT “ส่งมอบความสำเร็จ เติมเต็มความฝัน”',
+                        'BLOOM PROJECT',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.prompt(
+                          fontSize: isMobile ? 16 : 20,
+                          color: Colors.white,
+                        ),
+                      ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.1),
+                      Text(
+                        '“ส่งมอบความสำเร็จ เติมเต็มความฝัน”',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.prompt(
                           fontSize: isMobile ? 16 : 20,
