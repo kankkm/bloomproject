@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class FullScreenHero extends StatefulWidget {
   const FullScreenHero({super.key});
@@ -30,9 +31,12 @@ class _HomeScreenState extends State<FullScreenHero> {
         children: [
           // Background
           Positioned.fill(
-            child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430294/f6_viczew.jpg',
+            child: CachedNetworkImage(
+              imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430294/f6_viczew.jpg',
               fit: BoxFit.cover,
               alignment: Alignment.center,
+              placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+              errorWidget: (context, url, error) => const Center(child: Icon(Icons.error)),
             ).animate().fadeIn(duration: 800.ms),
           ),
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class LocationMap extends StatelessWidget {
   const LocationMap({super.key});
@@ -39,8 +40,12 @@ class LocationMap extends StatelessWidget {
                         padding: const EdgeInsets.all(20.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
-                            fit: BoxFit.cover,
+                          child: CachedNetworkImage(
+              imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
+              fit: BoxFit.cover,
+              placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
+
                           ),
                         ),
                       ),
@@ -115,8 +120,11 @@ class LocationMap extends StatelessWidget {
                       padding: const EdgeInsets.all(20.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
+                        child: CachedNetworkImage(
+                          imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
                           fit: BoxFit.cover,
+                          placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                          errorWidget: (context, url, error) => const Icon(Icons.error),
                         ),
                       ),
                     ),

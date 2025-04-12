@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class PromotionSection extends StatelessWidget {
   const PromotionSection({super.key});
@@ -18,8 +19,11 @@ class PromotionSection extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f8_ybjxzw.jpg',
+                    child: CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f8_ybjxzw.jpg',
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                   ),
                 ),
@@ -71,9 +75,11 @@ class PromotionSection extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: Image.asset(
-                    'assets/images/f8.jpg',
+                  child: CachedNetworkImage(
+                    imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f8_ybjxzw.jpg',
                     fit: BoxFit.cover,
+                    placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
                 ),
                 Padding(

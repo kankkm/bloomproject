@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class FeaturedProperties extends StatelessWidget {
   const FeaturedProperties({super.key});
@@ -31,63 +32,60 @@ class FeaturedProperties extends StatelessWidget {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
                       width: 400,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
                       width: 400,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: 400,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                   ],
                 );
               } else {
                 return Column(
                   children: [
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                     const SizedBox(height: 20),
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                     const SizedBox(height: 20),
-                    Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                   ],
                 );
               }
             },
           )
-
-
-          // const SizedBox(height: 30),
-          //ElevatedButton(
-           // style: ElevatedButton.styleFrom(
-            //  backgroundColor: const Color(0xFF22382C),
-             // foregroundColor: Colors.white,
-              //padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-              //shape: RoundedRectangleBorder(
-               // borderRadius: BorderRadius.circular(30),
-             // ),
-            //),
-           // onPressed: () {},
-            //child: const Text(
-             // 'VIEW ALL PROPERTIES',
-             // style: TextStyle(
-              //  fontSize: 16,
-               // fontWeight: FontWeight.bold,
-              //),
-          //  ),
-         // ),
         ],
       ),
     );

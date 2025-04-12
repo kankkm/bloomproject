@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class StuctureSection extends StatelessWidget {
   const StuctureSection({super.key});
@@ -96,8 +97,11 @@ class StuctureSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       child: AspectRatio(
                         aspectRatio: 720 / 1019,
-                        child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
+                        child: CachedNetworkImage(
+                          imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
                           fit: BoxFit.contain,
+                          placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                          errorWidget: (context, url, error) => const Icon(Icons.error),
                         ),
                       ),
                     ),
@@ -110,8 +114,11 @@ class StuctureSection extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
-                    fit: BoxFit.cover,
+                  child: CachedNetworkImage(
+                    imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f9_thscqh.jpg',
+                    fit: BoxFit.contain,
+                    placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
                 ),
                 Padding(

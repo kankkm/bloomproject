@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -79,10 +80,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 200),
-          child: Image.network('https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430293/f5_wxvgqk.png',
-            filterQuality: FilterQuality.low,
-            cacheWidth: 300,
+          child: CachedNetworkImage(
+            imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430293/f5_wxvgqk.png',
             fit: BoxFit.contain,
+            width: 200,
+            placeholder: (context, url) => CircularProgressIndicator(),
+            errorWidget: (context, url, error) => Icon(Icons.error),
           ),
         ),
         centerTitle: true,
