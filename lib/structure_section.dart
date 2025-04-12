@@ -61,21 +61,21 @@ class StuctureSection extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'แปลง A2 พื้นที่ใช้สอย 90 ตรม. ที่ดิน 46 ตร.วา',
+                              'แปลง A2 พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 46 ตร.วา',
                               style: GoogleFonts.prompt(
                                 color: const Color(0xFF362E24),
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              'แปลง A3 พื้นที่ใช้สอย 90 ตรม. ที่ดิน 45 ตร.วา',
+                              'แปลง A3 พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 45 ตร.วา',
                               style: GoogleFonts.prompt(
                                 color: const Color(0xFF362E24),
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              'แปลง A4 (แปลงมุม) พื้นที่ใช้สอย 90 ตรม. ที่ดิน 52 ตร.วา',
+                              'แปลง A4 (แปลงมุม) พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 52 ตร.วา',
                               style: GoogleFonts.prompt(
                                 color: const Color(0xFF362E24),
                                 fontSize: 16,
@@ -144,7 +144,7 @@ class StuctureSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
-                        'พื้นที่ใช้สอย 90 ตรม. ที่ดิน 55 ตร.วา',
+                        'พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 55 ตร.วา',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
@@ -152,7 +152,7 @@ class StuctureSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
-                        'พื้นที่ใช้สอย 90 ตรม. ที่ดิน 46 ตร.วา',
+                        'พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 46 ตร.วา',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
@@ -160,7 +160,7 @@ class StuctureSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
-                        'พื้นที่ใช้สอย 90 ตรม. ที่ดิน 45 ตร.วา',
+                        'พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 45 ตร.วา',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
@@ -168,7 +168,7 @@ class StuctureSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                       Text(
-                        'พื้นที่ใช้สอย 90 ตรม. ที่ดิน 52 ตร.วา',
+                        'พื้นที่ใช้สอย 92.3 ตรม. ที่ดิน 52 ตร.วา',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24), fontSize: 16),
                       ),
                     ],

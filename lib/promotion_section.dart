@@ -105,7 +105,7 @@ class PromotionSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                       ),
                       Text(
-                        'บ้านชั้นเดียวจำนวน4หลัง',
+                        'บ้านชั้นเดียวจำนวน 4 หลัง',
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                       ),
                       Text(
