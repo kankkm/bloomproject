@@ -1,11 +1,11 @@
 {
-    "name": "myapp",
+    "name": "BLOOM PROJECT",
     "short_name": "myapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "้านเดี่ยวใกล้โรงพยาบาล สว่างแดนดิน",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
